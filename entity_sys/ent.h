@@ -4,7 +4,7 @@
 #include<algorithm>
 #include <memory>
 #include<bitset>
-#include "tex_manager.h" // a texture manager in sdl2 you can find it in texture handling folder here 
+#include "tex_manager.h"
 #include "SDl2/SDL_image.h"
 class comp ;
 class Entity ; 
