@@ -3,7 +3,7 @@
 
 #define SCREEN_WIDTH 1280 
 #define SCREEN_HEIGHT 720
-const int FPS =60;
+const int FPS =120;
 const int FrameDelay = 1000/FPS;
  Uint32  FrameStart ;
  int FrameTime ; 
@@ -15,12 +15,13 @@ int main(int argc, char** argv){
         while (game -> running()){
             //std :: cout << "works" ;
             FrameStart =SDL_GetTicks(); 
-            game-> handle_eve();
+           
             game -> update();
             game-> render();
             FrameTime =SDL_GetTicks() - FrameStart ;  
             if (FrameDelay>FrameTime)
-                SDL_Delay(FrameDelay-FrameTime);
+                SDL_Delay(FrameDelay-FrameTime); 
+            game-> handle_eve();
         }
     game->clean();
     
