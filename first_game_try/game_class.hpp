@@ -1,8 +1,11 @@
 #include <iostream>
 #include <ctime> 
 #include <SDL2/SDL.h>
-#include "SDl2/SDL_image.h"
-#include "comps.h"
+#include <vector>
+#include "./SDL2/SDL_image.h"
+#include "./SDL2/SDL_mixer.h"
+class colliderComp ;
+
 
 class Game { 
 
@@ -13,14 +16,17 @@ public:
 
      
     void handle_eve ();
-        
+       
     void update ();
     void render ();
     void clean () ;
     bool running ();
- 
-
-    static SDL_Renderer *renderer; 
+    static SDL_Renderer *renderer;
+    static SDL_Event event ;
+    static std::vector<colliderComp*> colliders;// colidable objects  
+    static bool hit_ground ; 
+    static SDL_Rect Camera ;
+    static SDL_Rect camera ; 
 private :
 bool isRunning=true; 
 SDL_Window *window; 

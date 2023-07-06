@@ -1,2 +1,2 @@
 all:
- g++    -o main tex_manager.cpp game_obj.cpp game_class.cpp  main.cpp  -lmingw32 -mwindows -lSDL2_image  -lSDL2main   -lSDL2      ; if ($?) { .\main } 
+	g++ game_class.cpp tex_manager.cpp vec_2d.cpp colli.cpp music.cpp ecs.cpp map.cpp  main.cpp -lSDL2_image -lSDL2_mixer -lSDL2main -lSDL2 -o main

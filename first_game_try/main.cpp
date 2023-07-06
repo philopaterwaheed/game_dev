@@ -1,9 +1,9 @@
 
 #include "game_class.hpp"
 
-#define SCREEN_WIDTH 1280 
-#define SCREEN_HEIGHT 720
-const int FPS =120;
+#define SCREEN_WIDTH 1200
+#define SCREEN_HEIGHT 640
+const int FPS= 130;
 const int FrameDelay = 1000/FPS;
  Uint32  FrameStart ;
  int FrameTime ; 
@@ -11,7 +11,7 @@ Game *game = nullptr;
 SDL_Renderer * Game:: renderer = nullptr;
 int main(int argc, char** argv){
        game = new Game(); 
-        game -> init("game", SDL_WINDOWPOS_CENTERED,SDL_WINDOWPOS_CENTERED,500,500,0/*FULL SCREEN */ );
+        game -> init("Legends of the ucxznreached", SDL_WINDOWPOS_CENTERED,SDL_WINDOWPOS_CENTERED,SCREEN_WIDTH,SCREEN_HEIGHT,0/*FULL SCREEN */ );
         while (game -> running()){
             //std :: cout << "works" ;
             FrameStart =SDL_GetTicks(); 
